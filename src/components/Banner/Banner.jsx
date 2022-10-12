@@ -1,15 +1,20 @@
-import React from 'react';
+import SearchForm from "../SearchForm";
 
-export default class Banner extends React.PureComponent{
-    constructor(props){
-        super(props);
-    }
+import styles from "./Banner.module.scss";
 
-    render() {
-        return (
-            <div>
-                {`Welcome, ${this.props.userName}`}
-            </div>
-        )
-    }
-}
+const Banner = () => {
+  return (
+    <header className={styles["banner__container"]}>
+      <div className={styles["banner__header"]}>
+        <img src="/img/netflixroulette.svg" alt="netflixRoulette" />
+        <button className={styles["banner__button"]}>+ Add Movie</button>
+      </div>
+      <div className={styles["banner__content"]}>
+        <h2>FIND YOUR MOVIE</h2>
+        <SearchForm />
+      </div>
+    </header>
+  );
+};
+
+export default Banner;
