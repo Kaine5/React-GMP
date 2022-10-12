@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const ErrorBoundary = (props) => {
     
   const ErrorScene = () => {
@@ -12,3 +14,7 @@ const ErrorBoundary = (props) => {
 };
 
 export default ErrorBoundary;
+
+ErrorBoundary.PropTypes = {
+  isError: PropTypes.bool,
+}

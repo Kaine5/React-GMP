@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import styles from "./MovieCard.module.scss";
 
 const MovieCard = (props) => {
@@ -21,3 +23,11 @@ const MovieCard = (props) => {
 };
 
 export default MovieCard;
+
+MovieCard.PropTypes = {
+    imgURL: PropTypes.string,
+    imgAlt: PropTypes.string,
+    title: PropTypes.string,
+    releaseDate: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
+    genres: PropTypes.string,
+}
