@@ -24,7 +24,7 @@ const MovieCard = (props) => {
 
 export default MovieCard;
 
-MovieCard.PropTypes = {
+MovieCard.PropType = {
     imgURL: PropTypes.string,
     imgAlt: PropTypes.string,
     title: PropTypes.string,

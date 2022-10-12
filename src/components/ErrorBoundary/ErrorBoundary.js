@@ -15,6 +15,6 @@ const ErrorBoundary = (props) => {
 
 export default ErrorBoundary;
 
-ErrorBoundary.PropTypes = {
+ErrorBoundary.PropType = {
   isError: PropTypes.bool,
 }

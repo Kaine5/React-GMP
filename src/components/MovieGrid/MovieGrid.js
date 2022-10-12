@@ -16,7 +16,7 @@ const MovieGrid = (props) => {
 
 export default MovieGrid;
 
-MovieGrid.PropTypes = {
+MovieGrid.PropType = {
   movies: PropTypes.arrayOf({
     imgURL: PropTypes.string,
     imgAlt: PropTypes.string,
