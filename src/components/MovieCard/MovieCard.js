@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 import styles from "./MovieCard.module.scss";
 
@@ -11,7 +11,15 @@ const MovieCard = (props) => {
           src={props.imgURL}
           alt={props.imgAlt}
         />
-        <img className={styles["movieCard__moreButton"]} src="/img/more button.svg" alt="more" />
+        <img
+          className={styles["movieCard__moreButton"]}
+          src="/img/more button.svg"
+          alt="more"
+          onClick={() => {
+            props.setOpen(true);
+            props.setId(props.id);
+          }}
+        />
       </div>
       <div className={styles["movieCard__title"]}>{props.title}</div>
       <div className={styles["movieCard__releaseDate"]}>
@@ -25,9 +33,12 @@ const MovieCard = (props) => {
 export default MovieCard;
 
 MovieCard.PropType = {
-    imgURL: PropTypes.string,
-    imgAlt: PropTypes.string,
-    title: PropTypes.string,
-    releaseDate: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
-    genres: PropTypes.string,
-}
+  id: PropTypes.string,
+  imgURL: PropTypes.string,
+  imgAlt: PropTypes.string,
+  title: PropTypes.string,
+  releaseDate: PropTypes.oneOf([PropTypes.string, PropTypes.number]),
+  genres: PropTypes.string,
+  setId: PropTypes.func,
+  setOpen: PropTypes.func,
+};
